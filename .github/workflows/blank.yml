@@ -1,10 +1,24 @@
 on:
   workflow_dispatch:
+    inputs:
+      runner:
+        required: true
+        default: 'runner1'
+        type: choice
+        options:
+          - runner1
+          - runner2
+      sleep:
+        description: 'Test scenario tags'
+        required: true
+        default: '10'
+        type: string
+
 jobs:
-  build:
-    runs-on: runner1
+  job:
+    runs-on: ${{ inputs.runner }}
     steps:
       - run: |
           echo Add other actions to build,
-          sleep 30
+          sleep "${{ inputs.sleep }}"
           echo test, and deploy your project.
