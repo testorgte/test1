@@ -1,0 +1,10 @@
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ns1
+    steps:
+      - run: |
+          echo Add other actions to build,
+          sleep 30
+          echo test, and deploy your project.
