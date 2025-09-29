@@ -1,0 +1,8 @@
+on:
+  pull_request:
+
+jobs:
+  pr_test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo pr_test
