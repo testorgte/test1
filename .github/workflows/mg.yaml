@@ -1,8 +1,0 @@
-on:
-  merge_group:
-
-jobs:
-  pr_test:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo pr_test@mg
