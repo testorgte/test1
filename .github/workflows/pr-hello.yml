@@ -2,7 +2,7 @@ name: PR Hello World
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+  merge_group:
 
 jobs:
   hello:
